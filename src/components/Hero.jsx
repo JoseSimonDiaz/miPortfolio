@@ -4,7 +4,7 @@ import '../css/hero.css'
 function Hero() {
   const handleDownloadCV = () => {
     // console.log('Downloading CV...');
-    window.open('../../public/cv_JoseDiaz.pdf')    
+    window.open('../../public/cv_JoseDiaz.pdf', '_blank')    
   };
 
   return (
