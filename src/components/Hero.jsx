@@ -3,7 +3,8 @@ import { motion } from 'framer-motion';
 import '../css/hero.css'
 function Hero() {
   const handleDownloadCV = () => {
-    console.log('Downloading CV...');
+    // console.log('Downloading CV...');
+    window.open('../../public/cv_JoseDiaz.pdf')    
   };
 
   return (
@@ -39,7 +40,7 @@ function Hero() {
               transition={{ duration: 0.5, delay: 0.6 }}
             >
               Apasionado por crear soluciones tecnológicas innovadoras y funcionales.
-              especializándome en la creación de sitios web, servicios web y tiendas en línea modernos y elegantes.
+              especializándome en la creación de sitios web, servicios web, tiendas en línea modernos y elegantes.
             </motion.p>
             <motion.div 
               className="flex flex-col sm:flex-row items-center gap-4 justify-center md:justify-start"
