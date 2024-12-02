@@ -1,0 +1,11 @@
+:root{
+    --primary-color: #980094;
+}
+
+.icon{
+    color: var(--primary-color);
+}
+
+.education{
+    border-left: 4px solid var(--primary-color) !important;
+}
