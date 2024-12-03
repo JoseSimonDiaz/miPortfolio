@@ -1,11 +1,13 @@
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import '../css/hero.css'
+import cv from '../../public/downloads/cv_JoseDiaz.pdf'
+
 function Hero() {
-  const handleDownloadCV = () => {
-    // console.log('Downloading CV...');
-    window.open('../../public/cv_JoseDiaz.pdf', '_blank')    
-  };
+  // const handleDownloadCV = () => {
+  //   // console.log('Downloading CV...');
+  //   window.open('../../public/cv_JoseDiaz.pdf', '_blank')    
+  // };
 
   return (
     <section id="inicio" className="min-h-screen flex items-center bg-[#10101A] text-white pt-20">
@@ -48,14 +50,15 @@ function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.8 }}
             >
-              <motion.button
-                onClick={handleDownloadCV}
+              <motion.a
+                href={cv}
+                target='_blank'
                 className="w-full sm:w-auto bg-[#980094] hover:bg-[#7a0076] text-white font-bold py-3 px-6 rounded-lg transition-colors"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
                 Descargar CV
-              </motion.button>
+              </motion.a>
               <div className="flex gap-4">
                 <motion.a
                   href="https://www.linkedin.com/in/jos%C3%A9-sim%C3%B3n-d%C3%ADaz/"

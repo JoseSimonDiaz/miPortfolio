@@ -9,61 +9,38 @@ import 'swiper/css/pagination';
 function Projects() {
   const projects = [
     {
-      title: "E-commerce Platform",
-      description: "Plataforma de comercio electrónico completa con carrito de compras, pagos y gestión de pedidos",
-      technologies: ["React", "Node.js", "MongoDB", "Stripe"],
-      image: "/path-to-ecommerce-image.jpg",
-      demoUrl: "#",
-      githubUrl: "#"
+      title: "La Copa del Rey",
+      description: "Ecommerce de bebidas inspirado en la era medieval, especializado en cervezas artesanales, vinos históricos e hidromiel, ofreciendo una experiencia única de compra real.",
+      technologies: ["HTML", "CSS", "Bootstrap"],
+      image: "../../public/laCopaDelRey.png",
+      demoUrl: "https://lacopadelrey.netlify.app/",
+      githubUrl: "https://github.com/JoseSimonDiaz/LaCopaDelRey"
     },
     {
-      title: "Task Management App",
-      description: "Aplicación de gestión de tareas con características de colaboración en tiempo real",
-      technologies: ["React", "Express", "Socket.io", "MongoDB"],
-      image: "/path-to-taskapp-image.jpg",
-      demoUrl: "#",
-      githubUrl: "#"
+      title: "TechnoRolling",
+      description: "Tienda en línea de productos electrónicos y componentes de computadora, diseñada para ofrecer lo último en tecnología a gamers y entusiastas de hardware.",
+      technologies: ["JavaScript", "HTML", "CSS", "Bootstrap"],
+      image: "../../public/technoRolling.png",
+      demoUrl: "https://technorolling.netlify.app/",
+      githubUrl: "https://github.com/JoseSimonDiaz/grupo4_TechnoRolling"
     },
     {
-      title: "Social Media Dashboard",
-      description: "Dashboard para análisis de redes sociales con visualización de datos en tiempo real",
-      technologies: ["React", "D3.js", "Node.js", "Redis"],
-      image: "/path-to-dashboard-image.jpg",
-      demoUrl: "#",
-      githubUrl: "#"
-    },
+      title: "Generar Paz Moda",
+      description: "Ecommerce de moda sostenible con colecciones modernas y accesibles, pensado para quienes buscan estilo con conciencia ambiental.",
+      technologies: ["React", "HTML", "CSS", "Javascript", "Bootstrap", "Node.js", "MognoDB", "Express"],
+      image: "../../public/generarPazModa.png",
+      demoUrl: "https://generalpaz.netlify.app/",
+      githubUrl: "https://github.com/Boomcer/front-proyectoFinal/tree/main"
+    },    
     {
-      title: "Fitness Tracking App",
-      description: "Aplicación para seguimiento de ejercicios y nutrición con planes personalizados",
-      technologies: ["React", "Firebase", "Chart.js"],
-      image: "/path-to-fitness-image.jpg",
-      demoUrl: "#",
-      githubUrl: "#"
+      title: "WhatsApp Fale",
+      description: "Proyecto de WhatsApp fake de un torneo de programacion",
+      technologies: ["HTML", "CSS"],
+      image: "../../public/favicon/wpFake.png",
+      demoUrl: "https://web.whatsapp.com/",
+      githubUrl: "https://github.com/JoseSimonDiaz/WhatsApp_fake.git"
     },
-    {
-      title: "Real Estate Platform",
-      description: "Plataforma inmobiliaria con búsqueda avanzada y visualización de propiedades",
-      technologies: ["React", "Node.js", "PostgreSQL", "MapBox"],
-      image: "/path-to-realestate-image.jpg",
-      demoUrl: "#",
-      githubUrl: "#"
-    },
-    {
-      title: "Weather Dashboard",
-      description: "Dashboard del clima con pronósticos detallados y alertas meteorológicas",
-      technologies: ["React", "OpenWeather API", "Chart.js"],
-      image: "/path-to-weather-image.jpg",
-      demoUrl: "#",
-      githubUrl: "#"
-    },
-    {
-      title: "Recipe Sharing Platform",
-      description: "Plataforma para compartir y descubrir recetas con funcionalidades sociales",
-      technologies: ["React", "Node.js", "MongoDB", "AWS S3"],
-      image: "/path-to-recipe-image.jpg",
-      demoUrl: "#",
-      githubUrl: "#"
-    }
+    
   ];
 
   return (
