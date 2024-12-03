@@ -12,7 +12,7 @@ function Projects() {
       title: "La Copa del Rey",
       description: "Ecommerce de bebidas inspirado en la era medieval, especializado en cervezas artesanales, vinos históricos e hidromiel, ofreciendo una experiencia única de compra real.",
       technologies: ["HTML", "CSS", "Bootstrap"],
-      image: "../../public/laCopaDelRey.png",
+      image: "../../public/images/laCopaDelRey.png",
       demoUrl: "https://lacopadelrey.netlify.app/",
       githubUrl: "https://github.com/JoseSimonDiaz/LaCopaDelRey"
     },
@@ -20,7 +20,7 @@ function Projects() {
       title: "TechnoRolling",
       description: "Tienda en línea de productos electrónicos y componentes de computadora, diseñada para ofrecer lo último en tecnología a gamers y entusiastas de hardware.",
       technologies: ["JavaScript", "HTML", "CSS", "Bootstrap"],
-      image: "../../public/technoRolling.png",
+      image: "../../public/images/technoRolling.png",
       demoUrl: "https://technorolling.netlify.app/",
       githubUrl: "https://github.com/JoseSimonDiaz/grupo4_TechnoRolling"
     },
@@ -28,7 +28,7 @@ function Projects() {
       title: "Generar Paz Moda",
       description: "Ecommerce de moda sostenible con colecciones modernas y accesibles, pensado para quienes buscan estilo con conciencia ambiental.",
       technologies: ["React", "HTML", "CSS", "Javascript", "Bootstrap", "Node.js", "MognoDB", "Express"],
-      image: "../../public/generarPazModa.png",
+      image: "../../public/images/generarPazModa.png",
       demoUrl: "https://generalpaz.netlify.app/",
       githubUrl: "https://github.com/Boomcer/front-proyectoFinal/tree/main"
     },    
@@ -36,7 +36,7 @@ function Projects() {
       title: "WhatsApp Fale",
       description: "Proyecto de WhatsApp fake de un torneo de programacion",
       technologies: ["HTML", "CSS"],
-      image: "../../public/favicon/wpFake.png",
+      image: "../../public/images/wpFake.png",
       demoUrl: "https://web.whatsapp.com/",
       githubUrl: "https://github.com/JoseSimonDiaz/WhatsApp_fake.git"
     },
