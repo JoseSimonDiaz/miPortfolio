@@ -6,15 +6,13 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
-
-
 function Projects() {
   const projects = [
     {
       title: "La Copa del Rey",
       description: "Ecommerce de bebidas inspirado en la era medieval, especializado en cervezas artesanales, vinos históricos e hidromiel, ofreciendo una experiencia única de compra real.",
       technologies: ["HTML", "CSS", "Bootstrap"],
-      image: "../../public/images/laCopaDelRey.jpg",
+      image: "/images/laCopaDelRey.jpg",
       demoUrl: "https://lacopadelrey.netlify.app/",
       githubUrl: "https://github.com/JoseSimonDiaz/LaCopaDelRey"
     },
@@ -22,27 +20,26 @@ function Projects() {
       title: "TechnoRolling",
       description: "Tienda en línea de productos electrónicos y componentes de computadora, diseñada para ofrecer lo último en tecnología a gamers y entusiastas de hardware.",
       technologies: ["JavaScript", "HTML", "CSS", "Bootstrap"],
-      image: "../../public/images/technoRolling.png",
+      image: "/images/technoRolling.png",
       demoUrl: "https://technorolling.netlify.app/",
       githubUrl: "https://github.com/JoseSimonDiaz/grupo4_TechnoRolling"
     },
     {
       title: "Generar Paz Moda",
       description: "Ecommerce de moda sostenible con colecciones modernas y accesibles, pensado para quienes buscan estilo con conciencia ambiental.",
-      technologies: ["React", "HTML", "CSS", "Javascript", "Bootstrap", "Node.js", "MognoDB", "Express"],
-      image: "../../public/images/generarPazModa.png",
+      technologies: ["React", "HTML", "CSS", "Javascript", "Bootstrap", "Node.js", "MongoDB", "Express"],
+      image: "/images/generarPazModa.png",
       demoUrl: "https://generalpaz.netlify.app/",
       githubUrl: "https://github.com/Boomcer/front-proyectoFinal/tree/main"
-    },    
+    },
     {
       title: "WhatsApp Fake",
       description: "Proyecto de WhatsApp fake de un torneo de programacion",
       technologies: ["HTML", "CSS"],
-      image: "../../public/images/wpFake.png",
+      image: "/images/wpFake.png",
       demoUrl: "https://web.whatsapp.com/",
       githubUrl: "https://github.com/JoseSimonDiaz/WhatsApp_fake.git"
-    },
-    
+    }
   ];
 
   return (
