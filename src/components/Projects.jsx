@@ -6,13 +6,15 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
+
+
 function Projects() {
   const projects = [
     {
       title: "La Copa del Rey",
       description: "Ecommerce de bebidas inspirado en la era medieval, especializado en cervezas artesanales, vinos históricos e hidromiel, ofreciendo una experiencia única de compra real.",
       technologies: ["HTML", "CSS", "Bootstrap"],
-      image: "../../public/images/laCopaDelRey.png",
+      image: "../../public/images/laCopaDelRey.jpg",
       demoUrl: "https://lacopadelrey.netlify.app/",
       githubUrl: "https://github.com/JoseSimonDiaz/LaCopaDelRey"
     },
@@ -33,7 +35,7 @@ function Projects() {
       githubUrl: "https://github.com/Boomcer/front-proyectoFinal/tree/main"
     },    
     {
-      title: "WhatsApp Fale",
+      title: "WhatsApp Fake",
       description: "Proyecto de WhatsApp fake de un torneo de programacion",
       technologies: ["HTML", "CSS"],
       image: "../../public/images/wpFake.png",
