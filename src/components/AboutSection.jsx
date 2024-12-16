@@ -1,5 +1,7 @@
 import { FaGraduationCap, FaCertificate } from 'react-icons/fa';
 import '../css/about.css'
+import { Link } from 'react-scroll';
+
 
 function About() {
   const education = [
@@ -46,10 +48,18 @@ function About() {
         <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
           <div className="space-y-6">
             <p className="text-3xl font-bold mb-12">
-            Soy un desarrollador full stack con pasión por resolver problemas 
+            Soy un programador full stack con pasión por resolver problemas 
             </p>
             <p className="text-lg text-gray-300">
             Me apasiona crear experiencias únicas y expresar mi creatividad a través del código. Cuento con experiencia en el desarrollo de sitios web, aplicaciones, software y la automatización de procesos. Me mantengo constantemente actualizado con las últimas tendencias en desarrollo web para ofrecer soluciones innovadoras.            </p>
+            <Link
+              to="contacto"
+              smooth={true}
+              duration={500}
+              className="inline-block bg-[#980094] px-8 py-3 rounded-full text-white font-semibold hover:bg-[#980094]/90 transition-colors cursor-pointer"
+            >
+              Contáctame
+            </Link>            
           </div>
 
           <div className="space-y-8">

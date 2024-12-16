@@ -1,60 +1,63 @@
-function Education() {
+import { motion } from 'framer-motion';
+
+const Education = () => {
   const education = [
     {
-      title: "INGENIERIA EN SISTEMAS DE INFORMACIÓN",
-      status: "Cursando primer año"
+      title: "INGENIERO EN SISTEMAS DE INFORMACIÓN",
+      institution: "UTN - FACULTAD REGIONAL TUCUMAN",
+      period: "2022 - Cursando primer año"
     },
     {
       title: "HUMANIDADES Y CIENCIAS SOCIALES",
-      status: "Graduado"
-    }
-  ];
-
-  const certifications = [
+      institution: "Esc sec barrio el mirador",
+      period: "2021 - Graduado"
+    },
     {
       title: "Desarrollo web full stack",
       institution: "Rolling Code Scholl",
-      year: "2024",
-      status: "En curso"
+      period: "2024 - Finalizado"
+    },
+    {
+      title: "Curso de idioma japones",
+      institution: "Doki doki japan",
+      period: "2021 - Finalizado"
     },
     {
       title: "Técnico en arreglo de celulares y tablet",
       institution: "Ifet",
-      year: "2019",
-      status: "Finalizado"
+      period: "2019 - Finalizado"
     }
   ];
 
   return (
-    <section id="educación" className="py-20 bg-gray-50">
-      <div className="container mx-auto px-6">
-        <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">Educación y Capacitaciones</h2>
-        
-        <div className="grid md:grid-cols-2 gap-8">
-          <div>
-            <h3 className="text-2xl font-semibold mb-6">Educación Formal</h3>
-            {education.map((edu, index) => (
-              <div key={index} className="bg-white rounded-lg p-6 shadow-md mb-4">
-                <h4 className="text-xl font-semibold text-gray-800">{edu.title}</h4>
-                <p className="text-gray-600">{edu.status}</p>
-              </div>
-            ))}
-          </div>
-
-          <div>
-            <h3 className="text-2xl font-semibold mb-6">Capacitaciones</h3>
-            {certifications.map((cert, index) => (
-              <div key={index} className="bg-white rounded-lg p-6 shadow-md mb-4">
-                <h4 className="text-xl font-semibold text-gray-800">{cert.title}</h4>
-                <p className="text-gray-600">{cert.institution}</p>
-                <p className="text-gray-500">{cert.year} - {cert.status}</p>
-              </div>
-            ))}
-          </div>
+    <section id="education" className="py-20 bg-[#0C0C14]">
+      <div className="container mx-auto px-4">
+        <motion.h2 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="text-3xl font-bold mb-12 text-center"
+        >
+          Educación
+        </motion.h2>
+        <div className="space-y-8">
+          {education.map((item, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="bg-[#10101A] p-6 rounded-lg hover:shadow-lg transition-shadow"
+            >
+              <h3 className="text-xl font-semibold text-[#980094]">{item.title}</h3>
+              <p className="text-gray-300">{item.institution}</p>
+              <p className="text-sm text-gray-400">{item.period}</p>
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>
   );
-}
+};
 
 export default Education;

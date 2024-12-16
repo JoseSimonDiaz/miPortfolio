@@ -1,14 +1,9 @@
-import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { motion } from 'framer-motion';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import '../css/hero.css'
 import cv from '../../public/downloads/cv_JoseDiaz.pdf'
 
-function Hero() {
-  // const handleDownloadCV = () => {
-  //   // console.log('Downloading CV...');
-  //   window.open('../../public/cv_JoseDiaz.pdf', '_blank')    
-  // };
-
+const Hero = () => {
   return (
     <section id="inicio" className="min-h-screen flex items-center bg-[#10101A] text-white pt-20">
       <div className="container mx-auto px-4 sm:px-6 py-12 sm:py-20">
@@ -105,6 +100,6 @@ function Hero() {
       </div>
     </section>
   );
-}
+};
 
 export default Hero;

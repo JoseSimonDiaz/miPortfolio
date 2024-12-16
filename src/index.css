@@ -2,42 +2,47 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
+:root {
   scroll-behavior: smooth;
 }
 
 body {
-  margin: 0;
   font-family: 'Inter', sans-serif;
+  background-color: #10101A;
+  color: white;
 }
 
+/* Swiper customization */
 .swiper-button-next,
 .swiper-button-prev {
   color: #980094 !important;
 }
 
-.swiper-pagination-bullet-active {
+.swiper-pagination-bullet {
   background: #980094 !important;
 }
 
-@media (max-width: 768px) {
-  .swiper-button-next,
-  .swiper-button-prev {
-    display: none !important;
+/* Smooth scrolling for Safari */
+@supports (-webkit-overflow-scrolling: touch) {
+  body {
+    -webkit-overflow-scrolling: touch;
   }
 }
 
-/* Mobile menu styles */
-.mobile-menu {
-  display: none;
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
 }
 
-@media (max-width: 768px) {
-  .mobile-menu {
-    display: block;
-  }
-  
-  .desktop-menu {
-    display: none;
-  }
+::-webkit-scrollbar-track {
+  background: #0C0C14;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #980094;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #7a0077;
 }
