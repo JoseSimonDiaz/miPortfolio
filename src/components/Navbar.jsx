@@ -38,7 +38,7 @@ const Navbar = ({ isMenuOpen, setIsMenuOpen }) => {
     { title: 'Sobre mí', to: 'sobre-mi' },
     { title: 'Habilidades', to: 'skills' },
     { title: 'Proyectos', to: 'proyectos' },
-    { title: 'Contacto', to: 'contact' }
+    { title: 'Contacto', to: 'contacto' }
   ];
 
   return (
