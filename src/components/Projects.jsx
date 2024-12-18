@@ -60,7 +60,7 @@ const Projects = () => {
             slidesPerView={1}
             navigation
             pagination={{ clickable: true }}
-            autoplay={{ delay: 3000 }}
+            autoplay={{ delay: 9000 }}
             breakpoints={{
               640: {
                 slidesPerView: 1,
@@ -78,7 +78,7 @@ const Projects = () => {
               <SwiperSlide key={index}>
                 <motion.div
                   className="bg-[#0C0C14] rounded-lg overflow-hidden shadow-lg h-full"
-                  whileHover={{ scale: 1.03 }}
+                  whileHover={{ scale: 1.02 }}
                   transition={{ duration: 0.2 }}
                 >
                   <img
