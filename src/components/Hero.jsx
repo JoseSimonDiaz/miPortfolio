@@ -90,7 +90,7 @@ const Hero = () => {
               transition={{ duration: 0.3 }}
             >
               <img
-                src="https://avatars.githubusercontent.com/u/168593221?v=4"
+                src="https://media-eze1-1.cdn.whatsapp.net/v/t61.24694-24/473406780_917192413737177_4520202288699173539_n.jpg?ccb=11-4&oh=01_Q5AaIJ2L0uUIVwOSkaLtinwIa9dmrQks9R_9tSytNo_xsdWz&oe=678FF794&_nc_sid=5e03e0&_nc_cat=101"
                 alt="José Simon Díaz"
                 className="w-full h-full object-cover"
               />
