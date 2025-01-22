@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import '../css/hero.css'
 import cv from '../../public/downloads/cv_JoseDiaz.pdf'
-import Me from '../../public/images/me.jpg'
+// import Me from '../../public/images/me.jpg'
 
 const Hero = () => {
   return (
@@ -91,7 +91,7 @@ const Hero = () => {
               transition={{ duration: 0.3 }}
             >
               <img
-                src={Me}
+                src="../../public/images/me.jpg"
                 alt="José Simon Díaz"
                 className="w-full h-full object-cover"
               />
