@@ -21,7 +21,7 @@ function About() {
 
   const certifications = [
     {
-      title: "Desarrollo web full stack",
+      title: "Programador FullStack Web Developer",
       institution: "Rolling Code Scholl",
       year: "2024",
       status: "Finalizado"
@@ -43,12 +43,11 @@ function About() {
   return (
     <section id="sobre-mi" className="py-20 bg-[#0C0C14] text-white">
       <div className="container mx-auto px-6">
-        <h2 className="text-3xl font-bold text-center mb-12">Sobre Mí</h2>
-        
+        <h2 className="title text-3xl font-bold mb-12">Sobre Mí</h2>
         <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
           <div className="space-y-6">
             <p className="text-3xl font-bold mb-12">
-            Soy un programador full stack con pasión por resolver problemas 
+            Soy un programador FullStack web developer con pasión por resolver problemas 
             </p>
             <p className="text-lg text-gray-300">
             Me apasiona crear experiencias únicas y expresar mi creatividad a través del código. Cuento con experiencia en el desarrollo de sitios web, aplicaciones, software y la automatización de procesos. Me mantengo constantemente actualizado con las últimas tendencias en desarrollo web para ofrecer soluciones innovadoras.            </p>

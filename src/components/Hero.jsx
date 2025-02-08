@@ -57,7 +57,7 @@ const Hero = () => {
               </motion.a>
               <div className="flex gap-4">
                 <motion.a
-                  href="https://www.linkedin.com/in/jos%C3%A9-sim%C3%B3n-d%C3%ADaz/"
+                  href="https://www.linkedin.com/in/josesimondiaz/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-2xl sm:text-3xl hover:text-[#980094] transition-colors"

@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 
+
 const Education = () => {
   const education = [
     {
@@ -13,7 +14,7 @@ const Education = () => {
       period: "2021 - Graduado"
     },
     {
-      title: "Desarrollo web full stack",
+      title: "Fullstack Web Developer",
       institution: "Rolling Code Scholl",
       period: "2024 - Finalizado"
     },

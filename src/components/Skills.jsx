@@ -1,6 +1,37 @@
 import { motion } from 'framer-motion';
+import {
+  FaJs, // JavaScript
+  FaHtml5, // HTML
+  FaCss3, // CSS
+  FaBootstrap, // Bootstrap
+  FaReact, // React
+  FaNodeJs, // Node.js
+  FaDatabase, // MongoDB
+  FaTools, // Herramientas generales
+  FaGitAlt, // Git
+  FaGithub, // GitHub
+  
+} from 'react-icons/fa';
+import { SiExpress, SiPostman } from 'react-icons/si'; // Express y Postman
+import "../css/Proyects.css";
 
 const Skills = () => {
+  // Objeto que asocia cada habilidad con un icono
+  const skillIcons = {
+    "JavaScript": <FaJs />,
+    "HTML": <FaHtml5 />,
+    "CSS": <FaCss3 />,
+    "Bootstrap": <FaBootstrap />,
+    "React": <FaReact />,
+    "Node.js": <FaNodeJs />,
+    "Express": <SiExpress />,
+    "Agile (Scrum)": <FaTools />, // Icono genérico para Scrum
+    "MongoDB": <FaDatabase />,
+    "Postman": <SiPostman />,
+    "Git": <FaGitAlt />,
+    "GitHub": <FaGithub />,
+  };
+
   const skills = {
     "Lenguajes de Programación": ["JavaScript", "HTML", "CSS"],
     "Frameworks y Bibliotecas": ["Bootstrap", "React", "Node.js", "Express"],
@@ -16,7 +47,7 @@ const Skills = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-3xl font-bold mb-12 text-center"
+          className="text-3xl font-bold mb-12 title"
         >
           Habilidades
         </motion.h2>
@@ -35,9 +66,10 @@ const Skills = () => {
                   <motion.span
                     key={skillIndex}
                     whileHover={{ scale: 1.05 }}
-                    className="bg-[#980094]/20 px-3 py-1 rounded-full text-sm"
+                    className="bg-[#980094]/20 px-3 py-1 rounded-full text-sm flex items-center gap-2"
                   >
-                    {skill}
+                    {skillIcons[skill]} {/* Renderiza el icono */}
+                    {skill} {/* Renderiza el nombre de la habilidad */}
                   </motion.span>
                 ))}
               </div>

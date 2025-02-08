@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-scroll';
 import { motion } from 'framer-motion';
+import { FaHome, FaUser, FaCode, FaProjectDiagram, FaEnvelope } from 'react-icons/fa';
 
 const Navbar = ({ isMenuOpen, setIsMenuOpen }) => {
   const [scrolled, setScrolled] = useState(false);
@@ -34,11 +35,11 @@ const Navbar = ({ isMenuOpen, setIsMenuOpen }) => {
   };
 
   const navLinks = [
-    { title: 'Inicio', to: 'inicio' },
-    { title: 'Sobre mí', to: 'sobre-mi' },
-    { title: 'Habilidades', to: 'skills' },
-    { title: 'Proyectos', to: 'proyectos' },
-    { title: 'Contacto', to: 'contacto' }
+    { title: 'Inicio', to: 'inicio', icon: <FaHome /> },
+    { title: 'Sobre mí', to: 'sobre-mi', icon: <FaUser /> },
+    { title: 'Habilidades', to: 'skills', icon: <FaCode /> },
+    { title: 'Proyectos', to: 'proyectos', icon: <FaProjectDiagram /> },
+    { title: 'Contacto', to: 'contacto', icon: <FaEnvelope /> }
   ];
 
   return (
@@ -63,8 +64,9 @@ const Navbar = ({ isMenuOpen, setIsMenuOpen }) => {
                 to={link.to}
                 smooth={true}
                 duration={500}
-                className="cursor-pointer hover:text-[#980094] transition-colors"
+                className="cursor-pointer hover:text-[#980094] transition-colors flex items-center gap-2"
               >
+                {link.icon} {/* Icono */}
                 {link.title}
               </Link>
             ))}
@@ -110,8 +112,9 @@ const Navbar = ({ isMenuOpen, setIsMenuOpen }) => {
               smooth={true}
               duration={500}
               onClick={() => setIsMenuOpen(false)}
-              className="text-lg hover:text-[#980094] transition-colors"
+              className="text-lg hover:text-[#980094] transition-colors flex items-center gap-2"
             >
+              {link.icon} {/* Icono */}
               {link.title}
             </Link>
           ))}
