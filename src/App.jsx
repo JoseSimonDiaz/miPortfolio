@@ -27,9 +27,9 @@ function App() {
       <Navbar isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
       <div className={`transition-all duration-300 ${isMenuOpen ? 'filter blur-sm' : ''}`}>
         <Hero />
+        <Projects />
         <AboutSection />
         <Skills />
-        <Projects />
         <Contact />
       </div>
 
