@@ -1,43 +1,37 @@
 import { motion } from 'framer-motion';
 import {
-  FaJs, // JavaScript
-  FaHtml5, // HTML
-  FaCss3, // CSS
-  FaBootstrap, // Bootstrap
-  FaReact, // React
-  FaNodeJs, // Node.js
-  FaDatabase, // MongoDB
-  FaTools, // Herramientas generales
-  FaGitAlt, // Git
-  FaGithub, // GitHub
-  
-} from 'react-icons/fa';
-import { SiExpress, SiPostman } from 'react-icons/si'; // Express y Postman
-import "../css/Proyects.css";
+  SiJavascript, SiHtml5, SiCss3, SiBootstrap, SiReact, SiNodedotjs, SiExpress, SiMongodb,
+  SiPostman, SiGit, SiGithub, SiTailwindcss, SiMysql, SiFigma, SiCanva
+} from 'react-icons/si';
+import { FaTasks } from 'react-icons/fa'; 
 
 const Skills = () => {
-  // Objeto que asocia cada habilidad con un icono
-  const skillIcons = {
-    "JavaScript": <FaJs />,
-    "HTML": <FaHtml5 />,
-    "CSS": <FaCss3 />,
-    "Bootstrap": <FaBootstrap />,
-    "React": <FaReact />,
-    "Node.js": <FaNodeJs />,
-    "Express": <SiExpress />,
-    "Agile (Scrum)": <FaTools />, // Icono genérico para Scrum
-    "MongoDB": <FaDatabase />,
-    "Postman": <SiPostman />,
-    "Git": <FaGitAlt />,
-    "GitHub": <FaGithub />,
-  };
-
   const skills = {
     "Lenguajes de Programación": ["JavaScript", "HTML", "CSS"],
-    "Frameworks y Bibliotecas": ["Bootstrap", "React", "Node.js", "Express"],
+    "Frameworks y Bibliotecas": ["Bootstrap", "React", "Node.js", "Express", "Tailwind CSS"],
     "Metodologías de Desarrollo": ["Agile (Scrum)"],
-    "Base de datos": ["MongoDB"],
-    "Herramientas": ["Postman", "Git", "GitHub"]
+    "Base de datos": ["MongoDB", "MySQL"],
+    "Herramientas": ["Postman", "Git", "GitHub", "Figma", "Canva"]
+  };
+
+  // Objeto para mapear todas las tecnologías a sus íconos
+  const icons = {
+    "JavaScript": <SiJavascript className="inline-block mr-2" />,
+    "HTML": <SiHtml5 className="inline-block mr-2" />,
+    "CSS": <SiCss3 className="inline-block mr-2" />,
+    "Bootstrap": <SiBootstrap className="inline-block mr-2" />,
+    "React": <SiReact className="inline-block mr-2" />,
+    "Node.js": <SiNodedotjs className="inline-block mr-2" />,
+    "Express": <SiExpress className="inline-block mr-2" />,
+    "MongoDB": <SiMongodb className="inline-block mr-2" />,
+    "Postman": <SiPostman className="inline-block mr-2" />,
+    "Git": <SiGit className="inline-block mr-2" />,
+    "GitHub": <SiGithub className="inline-block mr-2" />,
+    "Tailwind CSS": <SiTailwindcss className="inline-block mr-2" />,
+    "MySQL": <SiMysql className="inline-block mr-2" />,
+    "Figma": <SiFigma className="inline-block mr-2" />,
+    "Canva": <SiCanva className="inline-block mr-2" />,
+    "Agile (Scrum)": <FaTasks className="inline-block mr-2" /> 
   };
 
   return (
@@ -47,7 +41,7 @@ const Skills = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-3xl font-bold mb-12 title"
+          className="text-3xl font-bold mb-12 text-center"
         >
           Habilidades
         </motion.h2>
@@ -66,10 +60,10 @@ const Skills = () => {
                   <motion.span
                     key={skillIndex}
                     whileHover={{ scale: 1.05 }}
-                    className="bg-[#980094]/20 px-3 py-1 rounded-full text-sm flex items-center gap-2"
+                    className="bg-[#980094]/20 px-3 py-1 rounded-full text-sm flex items-center"
                   >
-                    {skillIcons[skill]} {/* Renderiza el icono */}
-                    {skill} {/* Renderiza el nombre de la habilidad */}
+                    {icons[skill]} 
+                    {skill}
                   </motion.span>
                 ))}
               </div>
