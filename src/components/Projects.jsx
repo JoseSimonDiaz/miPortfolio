@@ -4,6 +4,8 @@ import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import "../css/Proyects.css";
+
 
 const Projects = () => {
   const projects = [
@@ -52,7 +54,7 @@ const Projects = () => {
   return (
     <section id="proyectos" className="py-20 bg-[#10101A] text-white">
       <div className="container mx-auto px-6">
-        <h2 className="text-3xl font-bold text-center mb-12">Mis Proyectos</h2>
+      <h2 className="title text-3xl font-bold mb-12">Mis Proyectos</h2>
         <>
           <Swiper
             modules={[Navigation, Pagination, Autoplay]}
@@ -60,7 +62,7 @@ const Projects = () => {
             slidesPerView={1}
             navigation
             pagination={{ clickable: true }}
-            autoplay={{ delay: 3000 }}
+            autoplay={{ delay: 9000 }}
             breakpoints={{
               640: {
                 slidesPerView: 1,
@@ -78,7 +80,7 @@ const Projects = () => {
               <SwiperSlide key={index}>
                 <motion.div
                   className="bg-[#0C0C14] rounded-lg overflow-hidden shadow-lg h-full"
-                  whileHover={{ scale: 1.03 }}
+                  whileHover={{ scale: 1.02 }}
                   transition={{ duration: 0.2 }}
                 >
                   <img

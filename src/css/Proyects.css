@@ -1,6 +1,3 @@
-:root{
-    --primary-color: #980094;
-}
 
 .title {
     font-size: 3rem;
@@ -21,10 +18,7 @@
     animation: growLine 0.5s ease-out forwards;
   }
 
-.icon{
-    color: var(--primary-color);
-}
-
-.education{
-    border-left: 4px solid var(--primary-color) !important;
+.card-proyect{
+  max-height: 390px;
+  overflow: hidden;
 }

@@ -1,7 +1,8 @@
 import { motion } from 'framer-motion';
-import { FaGithub, FaLinkedin } from 'react-icons/fa';
-import '../css/hero.css'
-import cv from '../../public/downloads/cv_JoseDiaz.pdf'
+import { FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa'; // Importa FaInstagram
+import '../css/hero.css';
+import cv from '../../public/downloads/cv_JoseDiaz.pdf';
+import Me from '../../public/images/me.jpg';
 
 const Hero = () => {
   return (
@@ -56,7 +57,7 @@ const Hero = () => {
               </motion.a>
               <div className="flex gap-4">
                 <motion.a
-                  href="https://www.linkedin.com/in/jos%C3%A9-sim%C3%B3n-d%C3%ADaz/"
+                  href="https://www.linkedin.com/in/josesimondiaz/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-2xl sm:text-3xl hover:text-[#980094] transition-colors"
@@ -75,6 +76,16 @@ const Hero = () => {
                 >
                   <FaGithub />
                 </motion.a>
+                <motion.a
+                  href="https://www.instagram.com/joseep3/?hl=es"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-2xl sm:text-3xl hover:text-[#980094] transition-colors"
+                  whileHover={{ scale: 1.2 }}
+                  whileTap={{ scale: 0.9 }}
+                >
+                  <FaInstagram />
+                </motion.a>
               </div>
             </motion.div>
           </motion.div>
@@ -90,7 +101,7 @@ const Hero = () => {
               transition={{ duration: 0.3 }}
             >
               <img
-                src="https://avatars.githubusercontent.com/u/168593221?v=4"
+                src={Me}
                 alt="José Simon Díaz"
                 className="w-full h-full object-cover"
               />
