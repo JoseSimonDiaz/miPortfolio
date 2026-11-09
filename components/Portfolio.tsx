@@ -1,6 +1,7 @@
 "use client";
 
-import { useEffect, useMemo, useState, type ReactNode } from "react";
+import { useEffect, useMemo, useState, type MouseEvent, type ReactNode } from "react";
+import { flushSync } from "react-dom";
 import { st } from "@/lib/st";
 import {
   CONTACT, dict, getFilters, getProjects, getServices, getSkills, getTimeline,
@@ -87,7 +88,23 @@ export default function Portfolio() {
     mainD += ` C ${dx} ${y + 105}, ${dx} ${y + 225}, 80 ${y + 330}`;
   }
 
-  const waHref = `https://wa.me/${CONTACT.whatsapp}?text=${encodeURIComponent(t.waMsg)}`;
+  // Same reveal as lavanderia_web: the new theme grows as a circle from the toggle button
+  const toggleTheme = (ev: MouseEvent<HTMLButtonElement>) => {
+    const next = isDark ? "light" : "dark";
+    const apply = () => { document.documentElement.setAttribute("data-theme", next); flushSync(() => setTheme(next)); };
+    if (typeof document.startViewTransition !== "function" || window.matchMedia("(prefers-reduced-motion: reduce)").matches) { apply(); return; }
+    const r = ev.currentTarget.getBoundingClientRect();
+    const x = r.left + r.width / 2, y = r.top + r.height / 2;
+    const radius = Math.hypot(Math.max(x, window.innerWidth - x), Math.max(y, window.innerHeight - y));
+    document.startViewTransition(apply).ready.then(() => {
+      document.documentElement.animate(
+        { clipPath: [`circle(0px at ${x}px ${y}px)`, `circle(${radius}px at ${x}px ${y}px)`] },
+        { duration: 950, easing: "cubic-bezier(0.77, 0, 0.175, 1)", pseudoElement: "::view-transition-new(root)" }
+      );
+    });
+  };
+
+  const waHref =`https://wa.me/${CONTACT.whatsapp}?text=${encodeURIComponent(t.waMsg)}`;
   const mailHref = `mailto:${CONTACT.email}?subject=${encodeURIComponent(t.mailSubject)}`;
 
   const pill = (on: boolean) =>
@@ -103,7 +120,7 @@ export default function Portfolio() {
   return (
     <div className="page">
       {/* FONDO */}
-      <div style={st("position: absolute; inset: 0; overflow: hidden; pointer-events: none")} aria-hidden="true">
+      <div style={st("position: absolute; inset: 0; z-index: 0; overflow: hidden; pointer-events: none")} aria-hidden="true">
         <div className="neb" style={st("position: absolute; top: 380px; right: -240px; width: 820px; height: 820px; border-radius: 50%; background: radial-gradient(circle, var(--n1), transparent 65%)")} />
         <div className="neb" style={st("position: absolute; top: 2200px; left: -320px; width: 780px; height: 780px; border-radius: 50%; background: radial-gradient(circle, var(--n2), transparent 65%); animation-delay: -8s")} />
         <div className="neb" style={st("position: absolute; top: 4600px; right: -300px; width: 800px; height: 800px; border-radius: 50%; background: radial-gradient(circle, var(--n1), transparent 65%); animation-delay: -14s")} />
@@ -130,11 +147,13 @@ export default function Portfolio() {
         <div className="navbar" style={st("position: relative; z-index: 2")}>
           <div className="prog" style={st("height: 3px; background: linear-gradient(90deg, #6D7BFF, #B27BFF, #F5B84B); transform-origin: left; transform: scaleX(0)")} />
           <div className="wrap" style={st("display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 74px")}>
-            <a href="#top" aria-label="JSD" style={st("display: flex; align-items: center; gap: 12px")}>
-              <span className="glass" style={st("width: 40px; height: 40px; border-radius: 12px; display: flex; align-items: center; justify-content: center")}>
-                <Icon size={22} stroke="var(--ac)"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5M14 4l-4 16" /></Icon>
-              </span>
-              <span className="sg" style={st("font-size: 22px; font-weight: 700; letter-spacing: -0.3px")}>JSD.</span>
+            <a href="#top" aria-label="José Simón Díaz" style={st("display: flex; align-items: center; gap: 12px")}>
+              <svg width="40" height="40" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+                <circle cx="32" cy="32" r="28" stroke="var(--ac)" strokeWidth="3.5" />
+                <path d="M20 22 L32 44 L44 22" stroke="var(--tx)" strokeWidth="5" strokeLinejoin="miter" />
+                <circle cx="32" cy="12" r="3.2" fill={isDark ? "#F5B84B" : "#C98A12"} />
+              </svg>
+              <span className="wmark" style={st("font-family: 'Fraunces', Georgia, serif; font-size: 22px; font-weight: 500; letter-spacing: 0.16em; line-height: 1")}>JSD</span>
             </a>
             <nav className="dnav" aria-label="Principal" style={st("display: flex; gap: 38px; font-size: 15px; color: var(--mu)")}>
               {navLinks.map((l) => (<a key={l.href} className="ul" href={l.href}>{l.label}</a>))}
@@ -144,7 +163,7 @@ export default function Portfolio() {
                 <button className="mono" onClick={() => setLang("es")} aria-label="Español" aria-pressed={es} style={pill(es)}>ES</button>
                 <button className="mono" onClick={() => setLang("en")} aria-label="English" aria-pressed={!es} style={pill(!es)}>EN</button>
               </div>
-              <button className="glass" onClick={() => setTheme(isDark ? "light" : "dark")} aria-label={t.themeLabel} style={st("width: 46px; height: 46px; border-radius: 50%; display: flex; align-items: center; justify-content: center; padding: 0")}>
+              <button className="glass" onClick={toggleTheme} aria-label={t.themeLabel} style={st("width: 46px; height: 46px; border-radius: 50%; display: flex; align-items: center; justify-content: center; padding: 0")}>
                 <Icon size={19} sw={1.7}>
                   {isDark
                     ? <><circle cx="12" cy="12" r="4" /><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" /></>
@@ -160,7 +179,7 @@ export default function Portfolio() {
         </div>
       </header>
 
-      <main>
+      <main style={st("position: relative; z-index: 1")}>
         {/* HERO */}
         <section id="top" className="wrap" style={st("position: relative; padding-top: 70px; padding-bottom: 60px; min-height: 780px; box-sizing: border-box")}>
           <div className="hero">
@@ -245,6 +264,9 @@ export default function Portfolio() {
             {projects.map((p) => (
               <a key={p.title} href={p.href} {...(p.external ? { target: "_blank", rel: "noopener noreferrer" } : {})} className="card glass reveal" style={st("display: block; border-radius: 24px; overflow: hidden")}>
                 <div style={st("height: 230px; overflow: hidden")}>
+                  {p.img ? (
+                    <img className="thumb" src={p.img} alt={p.title} loading="lazy" style={st("display: block; width: 100%; height: 100%; object-fit: cover; object-position: top")} />
+                  ) : (
                   <div className="thumb" style={st(`height: 100%; padding: 26px; box-sizing: border-box; background: linear-gradient(135deg, ${p.a}, ${p.b})`)}>
                     <div style={st("display: flex; gap: 7px")}>
                       {[0, 1, 2].map((k) => (<span key={k} style={st("width: 9px; height: 9px; border-radius: 50%; background: rgba(255,255,255,.4)")} />))}
@@ -255,6 +277,7 @@ export default function Portfolio() {
                       {[0, 1, 2].map((k) => (<div key={k} style={st("height: 60px; border-radius: 10px; background: rgba(255,255,255,.2)")} />))}
                     </div>
                   </div>
+                  )}
                 </div>
                 <div style={st("padding: 26px 28px 30px")}>
                   <div className="mono" style={st("font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: #F5B84B")}>{p.meta}</div>

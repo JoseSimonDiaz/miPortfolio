@@ -13,9 +13,9 @@ export const dict = {
     navProjects: "Proyectos", navServices: "Servicios", navExp: "Experiencia", navStack: "Stack", cta: "Hablemos", themeLabel: "Cambiar tema",
     loc: "TUCUMÁN, ARGENTINA", role1: "Full Stack Developer", role2: "en Tucumán", avail: "Abierto a trabajo remoto · GMT-3",
     sub: "Transformo ideas y procesos en software útil: sistemas a medida, tiendas online y aplicaciones web para problemas reales.",
-    cvLabel: "CURRICULUM // PDF", cvBtn: "Descargar CV", cvHref: "/CV_Jose_Simon_Diaz_ES.pdf", ghLabel: "REPOSITORIOS // DEV",
+    cvLabel: "CURRICULUM // PDF", cvBtn: "Descargar CV", cvHref: "/cv/CV_Jose_Simon_Diaz_ES.pdf", ghLabel: "REPOSITORIOS // DEV",
     b1: "Scrum Master · Equipo de 11 personas, 2026", b2: "Tutor Full Stack · RollingCode School", vizLabel: "Mapa de tecnologías con las que trabajo",
-    eyProjects: "Proyectos", titleProjects: "Trabajo real, en producción.", subProjects: "Sistemas que usan organismos, cooperativas y plataformas educativas, y tiendas online que armé desde cero.",
+    eyProjects: "Proyectos", titleProjects: "Trabajo real, en producción.", subProjects: "Sistemas que usan organismos del Gobierno de Tucumán, cooperativas y plataformas educativas, y sitios para comercios locales.",
     eyServices: "Servicios", titleServices: "Lo que puedo resolver por vos.",
     eyExp: "Trayectoria profesional", titleExp: "De no saber qué era un middleware a liderar equipos.",
     aboutP: "Me formé como Full Stack en RollingCode School, empecé dando tutorías y hoy construyo sistemas reales. Uso agentes de IA para entregar más rápido sin perder calidad.",
@@ -30,9 +30,9 @@ export const dict = {
     navProjects: "Work", navServices: "Services", navExp: "Experience", navStack: "Stack", cta: "Let's talk", themeLabel: "Toggle theme",
     loc: "TUCUMÁN, ARGENTINA", role1: "Full Stack Developer", role2: "in Tucumán", avail: "Open to remote work · GMT-3",
     sub: "I turn ideas and processes into useful software: custom systems, online stores and web applications for real problems.",
-    cvLabel: "CURRICULUM // PDF", cvBtn: "Download CV", cvHref: "/CV_Jose_Simon_Diaz_EN.pdf", ghLabel: "REPOSITORIES // DEV",
+    cvLabel: "CURRICULUM // PDF", cvBtn: "Download CV", cvHref: "/cv/CV_Jose_Simon_Diaz_EN.pdf", ghLabel: "REPOSITORIES // DEV",
     b1: "Scrum Master · Team of 11 people, 2026", b2: "Full Stack Tutor · RollingCode School", vizLabel: "Map of the technologies I work with",
-    eyProjects: "Work", titleProjects: "Real work, in production.", subProjects: "Systems used by public bodies, cooperatives and learning platforms, plus online stores I built from scratch.",
+    eyProjects: "Work", titleProjects: "Real work, in production.", subProjects: "Systems used by Tucumán government agencies, cooperatives and learning platforms, plus websites for local businesses.",
     eyServices: "Services", titleServices: "What I can solve for you.",
     eyExp: "Professional journey", titleExp: "From not knowing what middleware was to leading teams.",
     aboutP: "I trained as a Full Stack developer at RollingCode School, started as a tutor and now build real systems. I use AI agents to ship faster without losing quality.",
@@ -47,14 +47,14 @@ export const dict = {
 
 export type Dict = (typeof dict)[Lang];
 
-export type FilterId = "all" | "sys" | "shop" | "prod";
+export type FilterId = "all" | "sys" | "web" | "prod";
 
 export function getFilters(lang: Lang): { id: FilterId; label: string }[] {
   const es = lang === "es";
   return [
     { id: "all", label: es ? "TODOS" : "ALL" },
     { id: "sys", label: es ? "SISTEMAS" : "SYSTEMS" },
-    { id: "shop", label: "E-COMMERCE" },
+    { id: "web", label: es ? "SITIOS WEB" : "WEBSITES" },
     { id: "prod", label: es ? "PRODUCTO PROPIO" : "OWN PRODUCT" },
   ];
 }
@@ -63,38 +63,38 @@ export type Project = {
   cat: Exclude<FilterId, "all">;
   a: string; b: string; href: string; external: boolean;
   tagline: string; cta: string; meta: string; title: string; desc: string;
+  img?: string; // screenshot in /public/proyect; without it the card shows a gradient placeholder
 };
 
 export function getProjects(lang: Lang): Project[] {
   const es = lang === "es";
   const caseCta = es ? "Pedime el caso de estudio →" : "Ask for the case study →";
-  const liveCta = es ? "Ver proyecto online →" : "View live project →";
+  const gov = es ? "2024 — 2026 · Gobierno de Tucumán" : "2024 — 2026 · Tucumán Government";
   return [
     { cat: "sys", a: "#3B5BDB", b: "#10163F", href: "#contacto", external: false, tagline: "NestJS · React · PostgreSQL · Prisma", cta: caseCta,
-      meta: es ? "2025 · Sector público" : "2025 · Public sector",
-      title: es ? "Sistema de gestión del Gobierno de Tucumán" : "Tucumán Government management system",
-      desc: es ? "Plataforma con roles y permisos, auditoría de acciones y reportes en PDF." : "Platform with role-based access, action auditing and PDF reports." },
-    { cat: "sys", a: "#2F9E6B", b: "#0B2A1B", href: "#contacto", external: false, tagline: "Next.js · TypeScript · PWA", cta: caseCta,
-      meta: es ? "2026 · Cooperativa" : "2026 · Cooperative",
+      meta: gov, title: "IPACyM Digital", img: "/proyect/ipacym.png",
+      desc: es ? "Asambleas, balances y certificados con aprobación multi-área, permisos por rol (13 perfiles) y certificados en PDF." : "Assemblies, balance sheets and certificates with multi-area approval, role-based access (13 profiles) and PDF certificates." },
+    { cat: "sys", a: "#C58A2E", b: "#3D2306", href: "#contacto", external: false, tagline: "PWA · IndexedDB · PDF · Excel", cta: caseCta,
+      meta: gov, title: "IPAAT Webapp (SIPPCA)",
+      desc: es ? "Inscripción de productores, cooperativas e ingenios con parcelas y catastro, modo offline y reportes en PDF y Excel." : "Registration of growers, cooperatives and sugar mills with plots and land records, offline mode and PDF/Excel reports." },
+    { cat: "sys", a: "#2F9E6B", b: "#0B2A1B", href: "#contacto", external: false, tagline: "TypeScript · PostgreSQL · Prisma · Zod", cta: caseCta,
+      meta: es ? "2025 — 2026 · Cooperativa" : "2025 — 2026 · Cooperative",
       title: es ? "Cooperativa San Pedro de Colalao" : "San Pedro de Colalao Cooperative",
-      desc: es ? "Aplicación web instalable para administrar socios y operaciones, con permisos por rol." : "Installable web app to manage members and operations, with role permissions." },
+      desc: es ? "Gestión de caja, asociados, tarifas, facturación y planes de pago, con auditoría de cambios." : "Cash desk, members, rates, billing and payment plans, with change auditing." },
+    { cat: "sys", a: "#E03131", b: "#2B0808", href: "#contacto", external: false, tagline: "Node.js · MongoDB · Cypress", cta: caseCta,
+      meta: "2024 — 2026 · Edtech", title: "Universe · RollingCode School", img: "/proyect/universe.png",
+      desc: es ? "Plataforma de cursos online. Desarrollé el flujo de suscripción RollingCode+: alta de usuarios, planes y gestión." : "Online course platform. I built the RollingCode+ subscription flow: sign-up, plans and management." },
     { cat: "sys", a: "#7B4CE0", b: "#1D0F4D", href: "#contacto", external: false, tagline: "Node.js · MongoDB · Cypress · NFT", cta: caseCta,
-      meta: "2025 · Edtech",
-      title: es ? "Certificados NFT y RollingCode+" : "NFT certificates and RollingCode+",
-      desc: es ? "Certificados verificables en blockchain y flujo de suscripción, con QA automatizado." : "Blockchain-verifiable certificates and a subscription flow, with automated QA." },
+      meta: "2024 — 2026 · Edtech",
+      title: es ? "Certificados NFT" : "NFT certificates",
+      desc: es ? "Emisión de certificados como NFT en blockchain con verificación de autenticidad, y QA E2E con Cypress." : "Certificates issued as blockchain NFTs with authenticity checks, plus E2E QA with Cypress." },
+    { cat: "web", a: "#E8B923", b: "#2E2405", href: "#contacto", external: false, tagline: "Next.js · Three.js · Tailwind", cta: caseCta,
+      meta: es ? "2026 · Comercio local" : "2026 · Local business", title: "Lavandería Familiar", img: "/proyect/lavanderiaFamiliar.png",
+      desc: es ? "Sitio para una lavandería de barrio: servicios, productos propios y pedidos por WhatsApp." : "Website for a neighborhood laundry: services, its own products and orders via WhatsApp." },
     { cat: "prod", a: "#D1456A", b: "#3F0D20", href: "#contacto", external: false, tagline: "React · Game design", cta: caseCta,
       meta: es ? "2026 · En desarrollo" : "2026 · In progress",
       title: "Deventure",
       desc: es ? "Juego educativo estilo Duolingo y Kahoot para aprender a programar jugando." : "Educational game in the style of Duolingo and Kahoot to learn programming by playing." },
-    { cat: "shop", a: "#C58A2E", b: "#3D2306", href: "https://lacopadelrey.netlify.app/", external: true, tagline: "HTML · CSS · Bootstrap", cta: liveCta,
-      meta: "E-commerce", title: "La Copa del Rey",
-      desc: es ? "Tienda de bebidas con temática medieval: cervezas artesanales, vinos e hidromiel." : "Medieval-themed drinks store: craft beers, wines and mead." },
-    { cat: "shop", a: "#1F8CA8", b: "#082B38", href: "https://technorolling.netlify.app/", external: true, tagline: "JavaScript · HTML · CSS · Bootstrap", cta: liveCta,
-      meta: "E-commerce", title: "TechnoRolling",
-      desc: es ? "Tienda de electrónica y componentes de PC para gamers y entusiastas del hardware." : "Electronics and PC components store for gamers and hardware fans." },
-    { cat: "shop", a: "#2E9C7A", b: "#0A3326", href: "https://generalpaz.netlify.app/", external: true, tagline: "React · Node.js · Express · MongoDB", cta: liveCta,
-      meta: "E-commerce", title: "Generar Paz Moda",
-      desc: es ? "E-commerce de moda sostenible, full stack con MERN." : "Sustainable fashion store, built full stack with MERN." },
   ];
 }
 
@@ -103,7 +103,7 @@ export function getServices(lang: Lang) {
   return [
     { icon: "M3 5h18v12H3zM8 21h8M12 17v4", title: es ? "Sitios y tiendas online" : "Websites and online stores", desc: es ? "Landing pages, sitios institucionales y e-commerce rápidos, responsive y listos para vender." : "Fast, responsive landing pages, company sites and e-commerce built to sell." },
     { icon: "M4 6h16M4 12h16M4 18h10M18 16l2 2-2 2", title: es ? "Sistemas y APIs a medida" : "Custom systems and APIs", desc: es ? "Paneles de gestión, roles y permisos, auditoría, reportes e integraciones." : "Admin panels, roles and permissions, auditing, reports and integrations." },
-    { icon: "M9 12l2 2 4-4M21 12a9 9 0 11-18 0 9 9 0 0118 0z", title: es ? "QA y automatización" : "QA and automation", desc: es ? "Pruebas end-to-end con Cypress y Playwright, y revisión de proyectos existentes." : "End-to-end tests with Cypress and Playwright, plus reviews of existing projects." },
+    { icon: "M9 12l2 2 4-4M21 12a9 9 0 11-18 0 9 9 0 0118 0z", title: es ? "QA y automatización" : "QA and automation", desc: es ? "Pruebas end-to-end con Cypress y revisión de proyectos existentes." : "End-to-end tests with Cypress, plus reviews of existing projects." },
     { icon: "M12 3l9 5-9 5-9-5zM3 13l9 5 9-5", title: es ? "Liderazgo y mentoría" : "Leadership and mentoring", desc: es ? "Scrum Master para equipos de desarrollo y capacitación técnica." : "Scrum Master for development teams and technical training." },
   ];
 }
@@ -124,7 +124,7 @@ export function getSkills(lang: Lang) {
   return [
     { title: es ? "Lenguajes" : "Languages", items: ["TypeScript", "JavaScript", "HTML y CSS"] },
     { title: "Frameworks", items: ["React y Next.js", "Node.js y Express", "NestJS", "Tailwind y Bootstrap"] },
-    { title: es ? "Datos y calidad" : "Data and quality", items: ["PostgreSQL y Prisma", "MongoDB y MySQL", "Cypress y Playwright", "Postman"] },
+    { title: es ? "Datos y calidad" : "Data and quality", items: ["PostgreSQL y Prisma", "MongoDB y MySQL", "Cypress", "Postman"] },
     { title: es ? "Forma de trabajo" : "Ways of working", items: ["Scrum", "Git y GitHub", "Jira y Trello", es ? "Claude Code y Copilot" : "Claude Code and Copilot"] },
   ];
 }

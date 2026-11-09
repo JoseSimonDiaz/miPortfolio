@@ -22,14 +22,9 @@ export default function OpengraphImage() {
         }}
       >
         <svg width="96" height="96" viewBox="0 0 64 64">
-          <path
-            d="M24 22l-10 10 10 10M40 22l10 10-10 10M35 16l-6 32"
-            fill="none"
-            stroke="#8D9DFF"
-            strokeWidth="4"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
+          <circle cx="32" cy="32" r="28" stroke="#8D9DFF" strokeWidth="3.5" fill="none" />
+          <path d="M20 22 L32 44 L44 22" stroke="#EEF0FF" strokeWidth="5" strokeLinejoin="miter" fill="none" />
+          <circle cx="32" cy="12" r="3.2" fill="#F5B84B" />
         </svg>
         <div style={{ fontSize: 84, fontWeight: 700, marginTop: 32 }}>José Simón Díaz</div>
         <div style={{ fontSize: 44, color: "#8D9DFF", marginTop: 8 }}>Full Stack Developer</div>
