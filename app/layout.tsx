@@ -6,6 +6,7 @@ const description =
   "Desarrollador Full Stack en Tucumán, Argentina. Sistemas a medida, tiendas online y aplicaciones web. Disponible para proyectos freelance remotos.";
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.URL ?? "http://localhost:3000"),
   title,
   description,
   authors: [{ name: "José Simón Díaz" }],

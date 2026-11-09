@@ -1,3 +1,9 @@
 [build]
   command = "npm run build"
-  publish = ".next"
+  publish = "out"
+
+# static export writes the share image without an extension
+[[headers]]
+  for = "/opengraph-image"
+  [headers.values]
+    Content-Type = "image/png"

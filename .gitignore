@@ -1,8 +1,14 @@
 node_modules
-<<<<<<< Updated upstream
 dist
 dist-ssr
 *.local
+
+# Next.js
+.next
+out
+next-env.d.ts
+*.tsbuildinfo
+.env*
 
 
 .vscode/*
@@ -14,9 +20,3 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
-=======
-.next
-next-env.d.ts
-*.tsbuildinfo
-.env*
->>>>>>> Stashed changes
