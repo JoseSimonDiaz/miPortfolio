@@ -1,0 +1,249 @@
+- generic [ref=e2]:
+  - banner [ref=e3]:
+    - generic [ref=e6]:
+      - link "Vértice" [ref=e7] [cursor=pointer]:
+        - /url: "#top"
+        - generic [ref=e12]: VÉRTICE
+      - navigation "Principal" [ref=e13]:
+        - link "Proyectos" [ref=e14] [cursor=pointer]:
+          - /url: "#proyectos"
+        - link "Servicios" [ref=e15] [cursor=pointer]:
+          - /url: "#servicios"
+        - link "Experiencia" [ref=e16] [cursor=pointer]:
+          - /url: "#trayectoria"
+        - link "Stack" [ref=e17] [cursor=pointer]:
+          - /url: "#stack"
+      - generic [ref=e18]:
+        - generic [ref=e19]:
+          - button "Español" [pressed] [ref=e20] [cursor=pointer]: ES
+          - button "English" [ref=e21] [cursor=pointer]: EN
+        - button "Cambiar tema" [ref=e22] [cursor=pointer]
+        - link "Hablemos" [ref=e26] [cursor=pointer]:
+          - /url: "#contacto"
+  - main [ref=e27]:
+    - generic [ref=e29]:
+      - generic [ref=e30]:
+        - generic [ref=e31]: TUCUMÁN, ARGENTINA
+        - heading "José Simón Díaz" [level=1] [ref=e33]:
+          - generic [aria-hidden] [ref=e34]:
+            - generic [ref=e35]: J
+            - generic [ref=e36]: o
+            - generic [ref=e37]: s
+            - generic [ref=e38]: é
+          - generic [aria-hidden] [ref=e39]:
+            - generic [ref=e40]: S
+            - generic [ref=e41]: i
+            - generic [ref=e42]: m
+            - generic [ref=e43]: ó
+            - generic [ref=e44]: "n"
+          - generic [aria-hidden] [ref=e45]:
+            - generic [ref=e46]: D
+            - generic [ref=e47]: í
+            - generic [ref=e48]: a
+            - generic [ref=e49]: z
+        - generic [ref=e50]: Full Stack Developer en Tucumán
+        - generic [ref=e51]: Abierto a trabajo remoto · GMT-3
+        - paragraph [ref=e53]: "Transformo ideas y procesos en software útil: sistemas a medida, tiendas online y aplicaciones web para problemas reales."
+        - generic [ref=e54]:
+          - link "CURRICULUM // PDF Descargar CV" [ref=e55] [cursor=pointer]:
+            - /url: /cv/CV_Jose_Simon_Diaz_ES.pdf
+            - generic [ref=e56]: CURRICULUM // PDF
+            - generic [ref=e57]: Descargar CV
+          - link "REPOSITORIOS // DEV GitHub" [ref=e58] [cursor=pointer]:
+            - /url: https://github.com/JoseSimonDiaz
+            - generic [ref=e59]: REPOSITORIOS // DEV
+            - generic [ref=e60]: GitHub
+        - generic [ref=e63]:
+          - generic [ref=e64]: Scrum Master · Equipo de 11 personas, 2026
+          - generic [ref=e66]: Tutor Full Stack · RollingCode School
+      - img "Mapa de tecnologías con las que trabajo" [ref=e69]:
+        - generic [ref=e80]: TypeScript
+        - generic [ref=e83]: React
+        - generic [ref=e86]: NestJS
+        - generic [ref=e89]: PostgreSQL
+        - generic [ref=e92]: AI agents
+    - generic [ref=e100]:
+      - generic [ref=e101]: Proyectos
+      - heading "Trabajo real, en producción." [level=2] [ref=e102]
+      - paragraph [ref=e103]: Sistemas que usan organismos del Gobierno de Tucumán, cooperativas y plataformas educativas, y sitios para comercios locales.
+      - generic [ref=e104]:
+        - button "TODOS" [pressed] [ref=e105] [cursor=pointer]
+        - button "SISTEMAS" [ref=e106] [cursor=pointer]
+        - button "SITIOS WEB" [ref=e107] [cursor=pointer]
+        - button "PRODUCTO PROPIO" [ref=e108] [cursor=pointer]
+      - generic [ref=e109]:
+        - link "IPACyM Digital 2024 — 2026 · Gobierno de Tucumán IPACyM Digital Asambleas, balances y certificados con aprobación multi-área, permisos por rol (13 perfiles) y certificados en PDF. NestJS · React · PostgreSQL · Prisma Pedime el caso de estudio →" [ref=e110] [cursor=pointer]:
+          - /url: "#contacto"
+          - img "IPACyM Digital" [ref=e112]
+          - generic [ref=e113]:
+            - generic [ref=e114]: 2024 — 2026 · Gobierno de Tucumán
+            - heading "IPACyM Digital" [level=3] [ref=e115]
+            - paragraph [ref=e116]: Asambleas, balances y certificados con aprobación multi-área, permisos por rol (13 perfiles) y certificados en PDF.
+            - generic [ref=e117]: NestJS · React · PostgreSQL · Prisma
+            - generic [ref=e118]: Pedime el caso de estudio →
+        - link "2024 — 2026 · Gobierno de Tucumán IPAAT Webapp (SIPPCA) Inscripción de productores, cooperativas e ingenios con parcelas y catastro, modo offline y reportes en PDF y Excel. PWA · IndexedDB · PDF · Excel Pedime el caso de estudio →" [ref=e119] [cursor=pointer]:
+          - /url: "#contacto"
+          - generic [ref=e132]:
+            - generic [ref=e133]: 2024 — 2026 · Gobierno de Tucumán
+            - heading "IPAAT Webapp (SIPPCA)" [level=3] [ref=e134]
+            - paragraph [ref=e135]: Inscripción de productores, cooperativas e ingenios con parcelas y catastro, modo offline y reportes en PDF y Excel.
+            - generic [ref=e136]: PWA · IndexedDB · PDF · Excel
+            - generic [ref=e137]: Pedime el caso de estudio →
+        - link "2025 — 2026 · Cooperativa Cooperativa San Pedro de Colalao Gestión de caja, asociados, tarifas, facturación y planes de pago, con auditoría de cambios. TypeScript · PostgreSQL · Prisma · Zod Pedime el caso de estudio →" [ref=e138] [cursor=pointer]:
+          - /url: "#contacto"
+          - generic [ref=e151]:
+            - generic [ref=e152]: 2025 — 2026 · Cooperativa
+            - heading "Cooperativa San Pedro de Colalao" [level=3] [ref=e153]
+            - paragraph [ref=e154]: Gestión de caja, asociados, tarifas, facturación y planes de pago, con auditoría de cambios.
+            - generic [ref=e155]: TypeScript · PostgreSQL · Prisma · Zod
+            - generic [ref=e156]: Pedime el caso de estudio →
+        - 'link "Universe · RollingCode School 2024 — 2026 · Edtech Universe · RollingCode School Plataforma de cursos online. Desarrollé el flujo de suscripción RollingCode+: alta de usuarios, planes y gestión. Node.js · MongoDB · Cypress Pedime el caso de estudio →" [ref=e157] [cursor=pointer]':
+          - /url: "#contacto"
+          - img "Universe · RollingCode School" [ref=e159]
+          - generic [ref=e160]:
+            - generic [ref=e161]: 2024 — 2026 · Edtech
+            - heading "Universe · RollingCode School" [level=3] [ref=e162]
+            - paragraph [ref=e163]: "Plataforma de cursos online. Desarrollé el flujo de suscripción RollingCode+: alta de usuarios, planes y gestión."
+            - generic [ref=e164]: Node.js · MongoDB · Cypress
+            - generic [ref=e165]: Pedime el caso de estudio →
+        - link "2024 — 2026 · Edtech Certificados NFT Emisión de certificados como NFT en blockchain con verificación de autenticidad, y QA E2E con Cypress. Node.js · MongoDB · Cypress · NFT Pedime el caso de estudio →" [ref=e166] [cursor=pointer]:
+          - /url: "#contacto"
+          - generic [ref=e179]:
+            - generic [ref=e180]: 2024 — 2026 · Edtech
+            - heading "Certificados NFT" [level=3] [ref=e181]
+            - paragraph [ref=e182]: Emisión de certificados como NFT en blockchain con verificación de autenticidad, y QA E2E con Cypress.
+            - generic [ref=e183]: Node.js · MongoDB · Cypress · NFT
+            - generic [ref=e184]: Pedime el caso de estudio →
+        - 'link "Lavandería Familiar 2026 · Comercio local Lavandería Familiar Sitio para una lavandería de barrio: servicios, productos propios y pedidos por WhatsApp. Next.js · Three.js · Tailwind · Playwright Pedime el caso de estudio →" [ref=e185] [cursor=pointer]':
+          - /url: "#contacto"
+          - img "Lavandería Familiar" [ref=e187]
+          - generic [ref=e188]:
+            - generic [ref=e189]: 2026 · Comercio local
+            - heading "Lavandería Familiar" [level=3] [ref=e190]
+            - paragraph [ref=e191]: "Sitio para una lavandería de barrio: servicios, productos propios y pedidos por WhatsApp."
+            - generic [ref=e192]: Next.js · Three.js · Tailwind · Playwright
+            - generic [ref=e193]: Pedime el caso de estudio →
+        - link "2026 · En desarrollo Deventure Juego educativo estilo Duolingo y Kahoot para aprender a programar jugando. React · Game design Pedime el caso de estudio →" [ref=e194] [cursor=pointer]:
+          - /url: "#contacto"
+          - generic [ref=e207]:
+            - generic [ref=e208]: 2026 · En desarrollo
+            - heading "Deventure" [level=3] [ref=e209]
+            - paragraph [ref=e210]: Juego educativo estilo Duolingo y Kahoot para aprender a programar jugando.
+            - generic [ref=e211]: React · Game design
+            - generic [ref=e212]: Pedime el caso de estudio →
+    - generic [ref=e213]:
+      - generic [ref=e214]: Servicios
+      - heading "Lo que puedo resolver por vos." [level=2] [ref=e215]
+      - generic [ref=e216]:
+        - generic [ref=e217]:
+          - heading "Sitios y tiendas online" [level=3] [ref=e221]
+          - paragraph [ref=e222]: Landing pages, sitios institucionales y e-commerce rápidos, responsive y listos para vender.
+        - generic [ref=e223]:
+          - heading "Sistemas y APIs a medida" [level=3] [ref=e227]
+          - paragraph [ref=e228]: Paneles de gestión, roles y permisos, auditoría, reportes e integraciones.
+        - generic [ref=e229]:
+          - heading "QA y automatización" [level=3] [ref=e233]
+          - paragraph [ref=e234]: Pruebas end-to-end con Cypress y Playwright, y revisión de proyectos existentes.
+        - generic [ref=e235]:
+          - heading "Liderazgo y mentoría" [level=3] [ref=e239]
+          - paragraph [ref=e240]: Scrum Master para equipos de desarrollo y capacitación técnica.
+    - generic [ref=e241]:
+      - generic [ref=e242]: Trayectoria profesional
+      - heading "De no saber qué era un middleware a liderar equipos." [level=2] [ref=e243]
+      - paragraph [ref=e244]: Me formé como Full Stack en RollingCode School, empecé dando tutorías y hoy construyo sistemas reales. Uso agentes de IA para entregar más rápido sin perder calidad.
+      - generic [ref=e245]:
+        - article [ref=e246]:
+          - generic [ref=e248]:
+            - generic [ref=e249]:
+              - heading "Scrum Master" [level=3] [ref=e250]
+              - generic [ref=e251]: Enero 2026 — Actualidad
+            - generic [ref=e252]: Rolling Code School / Studio
+            - paragraph [ref=e253]: Lideré solo un equipo de desarrollo de 11 personas, coordinando entregas, ceremonias y calidad.
+            - generic [ref=e254]: Scrum · Jira · Trello · Liderazgo
+        - article [ref=e257]:
+          - generic [ref=e259]:
+            - generic [ref=e260]:
+              - heading "Tutor Full Stack" [level=3] [ref=e261]
+              - generic [ref=e262]: 2024 — Actualidad
+            - generic [ref=e263]: RollingCode School
+            - paragraph [ref=e264]: Acompaño a estudiantes de la comisión Full Stack desde cero hasta sus primeros proyectos.
+            - generic [ref=e265]: React · Node.js · Mentoría
+        - article [ref=e268]:
+          - generic [ref=e270]:
+            - generic [ref=e271]:
+              - heading "Desarrollador Full Stack" [level=3] [ref=e272]
+              - generic [ref=e273]: 2024 — 2025
+            - generic [ref=e274]: Rolling Code Studio · Labs · Ipacym
+            - paragraph [ref=e275]: Plataforma Ipacym, certificados NFT en blockchain, suscripciones RollingCode+ y QA con Cypress.
+            - generic [ref=e276]: Node.js · MongoDB · Next.js · Cypress
+        - article [ref=e279]:
+          - generic [ref=e281]:
+            - generic [ref=e282]:
+              - heading "Programador Full Stack Web Developer" [level=3] [ref=e283]
+              - generic [ref=e284]: "2024"
+            - generic [ref=e285]: RollingCode School
+            - paragraph [ref=e286]: "Egresado de la carrera: primer paso profesional en desarrollo web."
+            - generic [ref=e287]: MERN · Git · Agile
+        - article [ref=e290]:
+          - generic [ref=e292]:
+            - generic [ref=e293]:
+              - heading "Ingeniería en Sistemas" [level=3] [ref=e294]
+              - generic [ref=e295]: 2022 — Actualidad
+            - generic [ref=e296]: Estudios universitarios · Tucumán
+            - paragraph [ref=e297]: Cursando en paralelo al trabajo profesional.
+            - generic [ref=e298]: Formación continua
+    - generic [ref=e301]:
+      - generic [ref=e302]: Stack
+      - heading "Herramientas de todos los días." [level=2] [ref=e303]
+      - generic [ref=e304]:
+        - generic [ref=e305]:
+          - generic [ref=e306]: Lenguajes
+          - list [ref=e307]:
+            - listitem [ref=e308]: TypeScript
+            - listitem [ref=e310]: JavaScript
+            - listitem [ref=e312]: HTML y CSS
+        - generic [ref=e314]:
+          - generic [ref=e315]: Frameworks
+          - list [ref=e316]:
+            - listitem [ref=e317]: React y Next.js
+            - listitem [ref=e319]: Node.js y Express
+            - listitem [ref=e321]: NestJS
+            - listitem [ref=e323]: Tailwind y Bootstrap
+        - generic [ref=e325]:
+          - generic [ref=e326]: Datos y calidad
+          - list [ref=e327]:
+            - listitem [ref=e328]: PostgreSQL y Prisma
+            - listitem [ref=e330]: MongoDB y MySQL
+            - listitem [ref=e332]: Cypress y Playwright
+            - listitem [ref=e334]: Postman
+        - generic [ref=e336]:
+          - generic [ref=e337]: Forma de trabajo
+          - list [ref=e338]:
+            - listitem [ref=e339]: Scrum
+            - listitem [ref=e341]: Git y GitHub
+            - listitem [ref=e343]: Jira y Trello
+            - listitem [ref=e345]: Claude Code y Copilot
+    - generic [ref=e348]:
+      - generic [ref=e349]: Contacto
+      - heading "¿Tenés una idea? Hagámosla." [level=2] [ref=e350]
+      - paragraph [ref=e351]: Contame qué querés construir y lo vemos juntos. Escribime por el canal que prefieras.
+      - generic [ref=e352]:
+        - link "WhatsApp" [ref=e353] [cursor=pointer]:
+          - /url: https://wa.me/5493816179958?text=Hola%20Jos%C3%A9%2C%20vi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20hablar%20de%20un%20proyecto.
+        - link "Enviar un email" [ref=e356] [cursor=pointer]:
+          - /url: mailto:diazjosesimon001@gmail.com?subject=Consulta%20desde%20tu%20portafolio
+        - link "LinkedIn" [ref=e360] [cursor=pointer]:
+          - /url: https://www.linkedin.com/in/josesimondiaz/
+      - generic [ref=e363]: Disponible para proyectos freelance · Remoto
+  - contentinfo [ref=e364]:
+    - generic [ref=e365]:
+      - link "LinkedIn" [ref=e366] [cursor=pointer]:
+        - /url: https://www.linkedin.com/in/josesimondiaz/
+      - link "GitHub" [ref=e367] [cursor=pointer]:
+        - /url: https://github.com/JoseSimonDiaz
+      - link "Instagram" [ref=e368] [cursor=pointer]:
+        - /url: https://www.instagram.com/joseep3/
+    - generic [ref=e369]:
+      - generic [ref=e370]: © 2026 José Simón Díaz
+      - link "Volver arriba ↑" [ref=e371] [cursor=pointer]:
+        - /url: "#top"
